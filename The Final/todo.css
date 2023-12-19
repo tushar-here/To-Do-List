@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #171723;
+    color: white;
+    height: 100vh;
+
+}
+
+/*background animation*/
+
+.bubblecontainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubble {
+    position: relative;
+    display: flex;
+}
+
+.bubble span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: banimate 15s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+
+.bubble span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+}
+
+@keyframes banimate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.container {
+    width: 100vw;
+}
+
+.todos-heading {
+    text-align: center;
+    font-family: "bree serif";
+    letter-spacing: 30px;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    color: #0e3742;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: tubelight 5s linear infinite;
+
+}
+
+@keyframes tubelight {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+
+    }
+}
+
+.create-task-heading {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.create-task-heading-subpart {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.todo-items-heading {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.todo-items-heading-subpart {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.todo-items-container {
+    margin: 0px;
+    padding: 0px;
+    background-color: #282b47;
+    color: white;
+}
+
+.todo-item-container {
+    margin-top: 15px;
+}
+
+.todo-user-input {
+    background-color: white;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #15a6bc;
+    border-radius: 30px;
+    border-width: 5px;
+    padding: 15px;
+}
+
+.text-white {
+    color: white;
+    background-color: white;
+}
+
+.button {
+    color: white;
+    background-color: #4c63b6;
+    font-family: "Roboto";
+    font-size: 18px;
+    border-width: 0px;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.button-1 {
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+
+}
+
+button,
+input[type="button"] {
+    outline: none;
+}
+
+.margin {
+    margin-top: 65px;
+}
+
+.label-container {
+    width: 100%;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+
+.text-color {
+    color: #6b6b6b;
+}
+
+.checkbox-label {
+    font-family: "Bree Serif";
+    font-size: 32px;
+    font-weight: 400;
+    width: 82%;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.delete-icon-container {
+    text-align: right;
+    margin-left: auto;
+    width: 18%;
+}
+
+.delete-icon {
+    padding: 15px;
+    margin-right: 0;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.border-style-box {
+    border: 3px dashed #dcdcdc;
+}
+
+/*Footer Code*/
+
+.lmao {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.footer {
+    font-family: 'Roboto Mono';
+    background-color: #171723 transparent;
+    margin-top: 20px;
+    width: 100vw;
+}
+
+.footercontainer {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 30px 20px;
+}
+
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 12px;
+    background-color: white;
+    margin: 18px;
+    border-radius: 50%;
+}
+
+.socialicons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicons a:hover {
+    background-color: #111;
+    transition: 0.5;
+}
+
+.socialicons a:hover i {
+    color: white;
+    transition: 0.5;
+}
+
+.footernav {
+    margin: 30px 0;
+}
+
+.footernav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footernav ul li a {
+    color: white;
+    margin: 50px;
+    text-decoration: none;
+    font-size: 1.5em;
+    opacity: 0.6;
+    transition: 0.5;
+}
+
+.footernav ul li a:hover {
+    opacity: 1;
+}
+
+.footerbottom {
+    background-color: #000000;
+    padding: 7px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footerbottom p {
+    color: white;
+    margin: 10px;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
